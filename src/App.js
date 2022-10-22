@@ -7,6 +7,7 @@ import MovieListHeading from "./component/MovieListHeading";
 import AddFavourites from "./component/AddFavourites";
 import Filter from "./component/Filter ";
 import RemoveFavourites from "./component/RemoveFavourites";
+import{Routes,Route,link} from "react-router-dom";
 const App =()=>{
   const [movies, setMovies]=useState([]);
   const [favourites, setFavourites]= useState([]);
@@ -80,8 +81,20 @@ const App =()=>{
 					favouriteComponent={RemoveFavourites}
 				/>
 			</div>
+			<Routes>
+				<Route path="/description " element={<MovieList></MovieList>} ></Route>
+				<Route path="/trailer" element={<MovieList></MovieList>}></Route>
+
+
+		
+	</Routes>
+
 		</div>
+		
 	);
+	
+
 };
+
 
 export default App;
